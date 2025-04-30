@@ -1,0 +1,50 @@
+<div class="container">
+
+  <!-- Section: Add Student -->
+  <section class="activity-section add-section">
+    <h2>➕ Add New Student</h2>
+    <form (ngSubmit)="addStudent()">
+      <input type="text" [(ngModel)]="newStudent.id" name="id" placeholder="Student id" required />
+      <input type="text" [(ngModel)]="newStudent.name" name="name" placeholder="Student Name" required />
+      <input type="text" [(ngModel)]="newStudent.address" name="address" placeholder="address" required />
+      <input type="number" [(ngModel)]="newStudent.percentage" name="percentage" placeholder="percentage" required />
+      <input type="text" [(ngModel)]="newStudent.imageUrl" name="imageUrl" placeholder="Image URL" required />
+      <button type="submit">Add Student</button>
+    </form>
+  </section>
+
+  <!-- Section: Student List -->
+  <section class="activity-section list-section">
+    <h2>📋 Student List</h2>
+    <ul>
+      <li *ngFor="let Student of Students">
+        <div style="width: 100%;">
+          <h4>{{ Student.name }}</h4>
+          <p>{{ Student.address }}</p>
+          <p><strong>percentage:</strong> {{ Student.percentage }}</p>
+          <img [src]="Student.imageUrl" alt="{{ Student.name }}" width="120" style="border-radius: 8px; margin: 10px 0;" />
+          <div style="margin-top: 10px; display: flex; gap: 10px;">
+            <button class="edit-button" (click)="startEdit(Student)">✏️ Edit</button>
+            <button class="delete-button" (click)="deleteStudent(Student.id)">🗑️ Delete</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section: Edit Student -->
+  <section *ngIf="editStudent" class="activity-section edit-section">
+    <h2>✏️ Edit Student</h2>
+    <form (ngSubmit)="updateStudent()">
+      <input type="text" [(ngModel)]="editStudent.name" name="editName" placeholder="Student Name" required />
+      <input type="text" [(ngModel)]="editStudent.address" name="editaddress" placeholder="address" required />
+      <input type="number" [(ngModel)]="editStudent.percentage" name="editpercentage" placeholder="percentage" required />
+      <input type="text" [(ngModel)]="editStudent.imageUrl" name="editImageUrl" placeholder="Image URL" required />
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button type="submit" class="edit-button">✅ Update Student</button>
+        <button type="button" (click)="editStudent = null" class="delete-button">❌ Cancel</button>
+      </div>
+    </form>
+  </section>
+
+</div>

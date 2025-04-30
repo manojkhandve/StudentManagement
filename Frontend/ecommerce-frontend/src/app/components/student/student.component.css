@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Container Styles */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+h3 {
+    margin-top: 30px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="number"] {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    font-size: 16px;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4e44ce;
+    box-shadow: 0 0 0 3px rgba(78, 68, 206, 0.15);
+}
+
+/* Button Styles */
+button {
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #4e44ce;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3a30b0;
+    transform: translateY(-1px);
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 16px 0;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1a1a1a;
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Edit and Delete Buttons */
+.edit-button,
+.delete-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 8px;
+}
+
+.edit-button {
+    background: #f0f7ff;
+    color: #1a73e8;
+}
+
+.delete-button {
+    background: #fff0f0;
+    color: #e53935;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+.activity-section {
+    padding: 24px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    background: #f9f9f9;
+}
+
+/* Section Headings */
+.activity-section h2 {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 24px;
+        margin: 20px;
+        border-radius: 12px;
+    }
+
+    button {
+        padding: 14px;
+    }
+}

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product/product.component';
+import { StudentComponent } from './components/student/student.component';
 
 @NgModule({
   imports: [
@@ -12,7 +12,7 @@ import { ProductComponent } from './components/product/product.component';
     FormsModule,
     HttpClientModule,
     AppComponent, // Import AppComponent here
-    ProductComponent // Import ProductComponent here
+    StudentComponent // Import StudentComponent here
   ],
   bootstrap: [AppComponent] // Bootstrap the main AppComponent
 })
